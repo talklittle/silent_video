@@ -1,6 +1,16 @@
 # SilentVideo
 
+[![Build Status](https://travis-ci.org/talklittle/silent_video.svg?branch=master)](https://travis-ci.org/talklittle/silent_video)
+
 Convert GIFs and videos to silent videos, optimized for mobile playback.
+
+Documentation: https://hexdocs.pm/silent_video/
+
+## Example
+
+```elixir
+SilentVideo.convert_mobile("/path/to/input.gif", "/path/to/output.mp4")
+```
 
 ## Prerequisites
 
@@ -25,6 +35,10 @@ The SilentVideo package can be installed as:
       [applications: [:silent_video]]
     end
     ```
+
+## Release notes
+
+See the [changelog](CHANGELOG.md) for changes between versions.
 
 ## License
 

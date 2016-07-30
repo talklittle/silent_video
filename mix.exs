@@ -7,7 +7,9 @@ defmodule SilentVideo.Mixfile do
      elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps()]
+     deps: deps(),
+     description: description(),
+     package: package()]
   end
 
   # Configuration for the OTP application
@@ -28,5 +30,18 @@ defmodule SilentVideo.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [{:ffmpex, "~> 0.1.0"}]
+  end
+
+  defp description do
+    "Convert GIF and video to silent video."
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README*", "CHANGELOG*", "LICENSE*"],
+      maintainers: ["Andrew Shu"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/talklittle/silent_video"}
+    ]
   end
 end

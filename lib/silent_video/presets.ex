@@ -17,12 +17,14 @@ defmodule SilentVideo.Presets do
 
   Options:
 
+  * `:width` - An integer width for the output video. Defaults to input width.
   * `:height` - An integer height for the output video. Defaults to input height.
   * `:bitrate` - An integer bitrate for the output video. Defaults to 384_000.
   * `:framerate` - An integer framerate (frames per second). Defaults to 13.
   """
   def mobile_1(input_file_path, output_file_path, opts \\ []) do
-    output_height = integer_opt(opts, :height, "ih")
+    output_width = integer_opt(opts, :width, nil)
+    output_height = integer_opt(opts, :height, nil)
     bitrate = integer_opt(opts, :bitrate, 384_000)
     framerate = integer_opt(opts, :framerate, 13)
 
@@ -51,7 +53,7 @@ defmodule SilentVideo.Presets do
       |> add_file_option(option_qdiff(4))
       |> add_file_option(option_r(framerate))
       |> remove_audio
-      |> compatible_pixel_format(output_height)
+      |> compatible_pixel_format(output_width, output_height)
       |> streamable
     |> execute
   end
@@ -61,11 +63,13 @@ defmodule SilentVideo.Presets do
 
   Options:
 
+  * `:width` - An integer width for the output video. Defaults to input width.
   * `:height` - An integer height for the output video. Defaults to input height.
   * `:bitrate` - An integer bitrate for the output video. Defaults to 250_000.
   """
   def mobile_2(input_file_path, output_file_path, opts \\ []) do
-    output_height = integer_opt(opts, :height, "ih")
+    output_width = integer_opt(opts, :width, nil)
+    output_height = integer_opt(opts, :height, nil)
     bitrate = integer_opt(opts, :bitrate, 250_000)
 
     new_command_common_options()
@@ -78,7 +82,7 @@ defmodule SilentVideo.Presets do
         |> add_stream_option(option_bufsize(2 * bitrate))
       |> add_file_option(option_profile("baseline"))
       |> remove_audio
-      |> compatible_pixel_format(output_height)
+      |> compatible_pixel_format(output_width, output_height)
       |> streamable
     |> execute
   end
@@ -88,11 +92,13 @@ defmodule SilentVideo.Presets do
 
   Options:
 
+  * `:width` - An integer width for the output video. Defaults to input width.
   * `:height` - An integer height for the output video. Defaults to input height.
   * `:bitrate` - An integer bitrate for the output video. Defaults to 500_000.
   """
   def web_1(input_file_path, output_file_path, opts \\ []) do
-    output_height = integer_opt(opts, :height, "ih")
+    output_width = integer_opt(opts, :width, nil)
+    output_height = integer_opt(opts, :height, nil)
     bitrate = integer_opt(opts, :bitrate, 500_000)
 
     new_command_common_options()
@@ -105,7 +111,7 @@ defmodule SilentVideo.Presets do
         |> add_stream_option(option_bufsize(2 * bitrate))
       |> add_file_option(option_profile("high"))
       |> remove_audio
-      |> compatible_pixel_format(output_height)
+      |> compatible_pixel_format(output_width, output_height)
       |> streamable
     |> execute
   end
@@ -115,11 +121,13 @@ defmodule SilentVideo.Presets do
 
   Options:
 
+  * `:width` - An integer width for the output video. Defaults to input width.
   * `:height` - An integer height for the output video. Defaults to input height.
   * `:bitrate` - An integer bitrate for the output video. Defaults to 400_000.
   """
   def tablet_1(input_file_path, output_file_path, opts \\ []) do
-    output_height = integer_opt(opts, :height, "ih")
+    output_width = integer_opt(opts, :width, nil)
+    output_height = integer_opt(opts, :height, nil)
     bitrate = integer_opt(opts, :bitrate, 400_000)
 
     new_command_common_options()
@@ -132,7 +140,7 @@ defmodule SilentVideo.Presets do
         |> add_stream_option(option_bufsize(2 * bitrate))
       |> add_file_option(option_profile("main"))
       |> remove_audio
-      |> compatible_pixel_format(output_height)
+      |> compatible_pixel_format(output_width, output_height)
       |> streamable
     |> execute
   end

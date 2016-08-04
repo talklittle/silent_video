@@ -14,12 +14,25 @@ defmodule SilentVideo.FFmpexCommon do
 
   @doc """
   Use yuv420p pixel format instead of FFmpeg default yuv444p.
-  Requires width divisible by 2, so adds "-vf scale=..." option.
+  Requires width and height divisible by 2, so adds "-vf scale=..." option.
   """
-  def compatible_pixel_format(ffmpex_command, output_height \\ "ih") do
+  def compatible_pixel_format(ffmpex_command, output_width \\ nil, output_height \\ nil) do
     ffmpex_command
     |> add_file_option(option_pix_fmt("yuv420p"))
-    |> add_file_option(option_vf("scale=trunc(oh*a/2)*2:#{output_height}"))
+    |> add_file_option(option_vf(even_scale(output_width, output_height)))
+  end
+
+  defp even_scale(nil, nil) do
+    "scale=trunc(iw/2)*2:trunc(ih/2)*2"
+  end
+  defp even_scale(nil, output_height) do
+    "scale=-2:#{round(output_height/2)*2}"
+  end
+  defp even_scale(output_width, nil) do
+    "scale=#{round(output_width/2)*2}:-2"
+  end
+  defp even_scale(output_width, output_height) do
+    "scale=#{round(output_width/2)*2}:#{round(output_height/2)*2}"
   end
 
   @doc """

@@ -6,6 +6,7 @@ defmodule SilentVideo do
 
   Options:
 
+  * `:width` - An integer width for the output video. Defaults to input width.
   * `:height` - An integer height for the output video. Defaults to input height.
   * `:bitrate` - An integer bitrate for the output video. Defaults to 384_000.
   * `:framerate` - An integer framerate (frames per second). Defaults to 13.
@@ -19,6 +20,7 @@ defmodule SilentVideo do
 
   Options:
 
+  * `:width` - An integer width for the output video. Defaults to input width.
   * `:height` - An integer height for the output video. Defaults to input height.
   * `:bitrate` - An integer bitrate for the output video. Defaults to 250_000.
   """
@@ -31,6 +33,7 @@ defmodule SilentVideo do
 
   Options:
 
+  * `:width` - An integer width for the output video. Defaults to input width.
   * `:height` - An integer height for the output video. Defaults to input height.
   * `:bitrate` - An integer bitrate for the output video. Defaults to 500_000.
   """
@@ -43,6 +46,7 @@ defmodule SilentVideo do
 
   Options:
 
+  * `:width` - An integer width for the output video. Defaults to input width.
   * `:height` - An integer height for the output video. Defaults to input height.
   * `:bitrate` - An integer bitrate for the output video. Defaults to 400_000.
   """

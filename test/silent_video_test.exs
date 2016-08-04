@@ -36,4 +36,8 @@ defmodule SilentVideoTest do
     stat2 = File.stat! out2
     assert stat1.size < stat2.size
   end
+
+  test "handles odd width and height" do
+    assert {_, 0} = SilentVideo.convert_mobile(@fixture, @output_path, width: 99, height: 99)
+  end
 end

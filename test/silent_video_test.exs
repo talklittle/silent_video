@@ -3,7 +3,7 @@ defmodule SilentVideoTest do
   doctest SilentVideo
 
   @fixture Path.join(__DIR__, "fixtures/test-mpeg.mpg")
-  @output_path Path.join(System.tmp_dir, "silent-video-test-fixture.avi")
+  @output_path Path.join(System.tmp_dir, "silent-video-test-fixture.mp4")
 
   setup do
     on_exit fn ->
@@ -28,8 +28,8 @@ defmodule SilentVideoTest do
   end
 
   test "bitrate changes file size" do
-    out1 = Path.rootname(@output_path) <> "1.avi"
-    out2 = Path.rootname(@output_path) <> "2.avi"
+    out1 = Path.rootname(@output_path) <> "1.mp4"
+    out2 = Path.rootname(@output_path) <> "2.mp4"
     {_, 0} = SilentVideo.convert_mobile(@fixture, out1, bitrate: 100_000)
     {_, 0} = SilentVideo.convert_mobile(@fixture, out2, bitrate: 200_000)
     stat1 = File.stat! out1
@@ -39,5 +39,9 @@ defmodule SilentVideoTest do
 
   test "handles odd width and height" do
     assert {_, 0} = SilentVideo.convert_mobile(@fixture, @output_path, width: 99, height: 99)
+  end
+
+  test "handles odd max_width and max_height" do
+    assert {_, 0} = SilentVideo.convert_mobile(@fixture, @output_path, max_width: 99, max_height: 99)
   end
 end

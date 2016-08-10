@@ -27,6 +27,7 @@ defmodule SilentVideo do
   * `:max_width` - An integer maximum width for the output video.
   * `:max_height` - An integer maximum height for the output video.
   * `:bitrate` - An integer bitrate for the output video. Defaults to 250_000.
+  * `:framerate` - An integer framerate (frames per second). Defaults to input framerate.
   """
   def convert_mobile_2(input_file_path, output_file_path, opts \\ []) do
     Presets.mobile_2(Path.expand(input_file_path), Path.expand(output_file_path), opts)
@@ -42,6 +43,7 @@ defmodule SilentVideo do
   * `:max_width` - An integer maximum width for the output video.
   * `:max_height` - An integer maximum height for the output video.
   * `:bitrate` - An integer bitrate for the output video. Defaults to 500_000.
+  * `:framerate` - An integer framerate (frames per second). Defaults to input framerate.
   """
   def convert_web(input_file_path, output_file_path, opts \\ []) do
     Presets.web_1(Path.expand(input_file_path), Path.expand(output_file_path), opts)
@@ -57,6 +59,7 @@ defmodule SilentVideo do
   * `:max_width` - An integer maximum width for the output video.
   * `:max_height` - An integer maximum height for the output video.
   * `:bitrate` - An integer bitrate for the output video. Defaults to 400_000.
+  * `:framerate` - An integer framerate (frames per second). Defaults to input framerate.
   """
   def convert_tablet(input_file_path, output_file_path, opts \\ []) do
     Presets.tablet_1(Path.expand(input_file_path), Path.expand(output_file_path), opts)

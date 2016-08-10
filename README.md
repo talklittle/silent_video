@@ -24,7 +24,7 @@ The SilentVideo package can be installed as:
 
     ```elixir
     def deps do
-      [{:silent_video, "~> 0.1.0"}]
+      [{:silent_video, "~> 0.1.1"}]
     end
     ```
 

@@ -40,4 +40,8 @@ defmodule SilentVideoTest do
   test "handles odd width and height" do
     assert {_, 0} = SilentVideo.convert_mobile(@fixture, @output_path, width: 99, height: 99)
   end
+
+  test "handles odd max_width and max_height" do
+    assert {_, 0} = SilentVideo.convert_mobile(@fixture, @output_path, max_width: 99, max_height: 99)
+  end
 end

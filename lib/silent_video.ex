@@ -8,6 +8,8 @@ defmodule SilentVideo do
 
   * `:width` - An integer width for the output video. Defaults to input width.
   * `:height` - An integer height for the output video. Defaults to input height.
+  * `:max_width` - An integer maximum width for the output video.
+  * `:max_height` - An integer maximum height for the output video.
   * `:bitrate` - An integer bitrate for the output video. Defaults to 384_000.
   * `:framerate` - An integer framerate (frames per second). Defaults to 13.
   """
@@ -22,6 +24,8 @@ defmodule SilentVideo do
 
   * `:width` - An integer width for the output video. Defaults to input width.
   * `:height` - An integer height for the output video. Defaults to input height.
+  * `:max_width` - An integer maximum width for the output video.
+  * `:max_height` - An integer maximum height for the output video.
   * `:bitrate` - An integer bitrate for the output video. Defaults to 250_000.
   """
   def convert_mobile_2(input_file_path, output_file_path, opts \\ []) do
@@ -35,6 +39,8 @@ defmodule SilentVideo do
 
   * `:width` - An integer width for the output video. Defaults to input width.
   * `:height` - An integer height for the output video. Defaults to input height.
+  * `:max_width` - An integer maximum width for the output video.
+  * `:max_height` - An integer maximum height for the output video.
   * `:bitrate` - An integer bitrate for the output video. Defaults to 500_000.
   """
   def convert_web(input_file_path, output_file_path, opts \\ []) do
@@ -48,6 +54,8 @@ defmodule SilentVideo do
 
   * `:width` - An integer width for the output video. Defaults to input width.
   * `:height` - An integer height for the output video. Defaults to input height.
+  * `:max_width` - An integer maximum width for the output video.
+  * `:max_height` - An integer maximum height for the output video.
   * `:bitrate` - An integer bitrate for the output video. Defaults to 400_000.
   """
   def convert_tablet(input_file_path, output_file_path, opts \\ []) do

@@ -18,8 +18,6 @@ SilentVideo.convert_mobile("/path/to/input.gif", "/path/to/output.mp4")
 
 ## Installation
 
-The SilentVideo package can be installed as:
-
   1. Add `silent_video` to your list of dependencies in `mix.exs`:
 
     ```elixir

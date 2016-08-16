@@ -4,6 +4,8 @@ defmodule SilentVideo.FFmpexCommon do
   import FFmpex.Options.Video
   import FFmpex.Options.Video.Libx264
 
+  import Integer, only: [is_odd: 1]
+
   @doc """
   Remove audio track.
   """
@@ -23,16 +25,16 @@ defmodule SilentVideo.FFmpexCommon do
     |> add_file_option(option_vf(even_scale(output_width, output_height, max_width, max_height)))
   end
 
-  defp even_scale(w, h, maxw, maxh) when is_integer(w) and rem(w, 2) == 1 do
+  defp even_scale(w, h, maxw, maxh) when is_integer(w) and is_odd(w) do
     even_scale(round(w/2)*2, h, maxw, maxh)
   end
-  defp even_scale(w, h, maxw, maxh) when is_integer(h) and rem(h, 2) == 1 do
+  defp even_scale(w, h, maxw, maxh) when is_integer(h) and is_odd(h) do
     even_scale(w, round(h/2)*2, maxw, maxh)
   end
-  defp even_scale(w, h, maxw, maxh) when is_integer(maxw) and rem(maxw, 2) == 1 do
+  defp even_scale(w, h, maxw, maxh) when is_integer(maxw) and is_odd(maxw) do
     even_scale(w, h, round(maxw/2)*2, maxh)
   end
-  defp even_scale(w, h, maxw, maxh) when is_integer(maxh) and rem(maxh, 2) == 1 do
+  defp even_scale(w, h, maxw, maxh) when is_integer(maxh) and is_odd(maxh) do
     even_scale(w, h, maxw, round(maxh/2)*2)
   end
   defp even_scale(nil, nil, nil, nil), do: "scale=trunc(iw/2)*2:trunc(ih/2)*2"

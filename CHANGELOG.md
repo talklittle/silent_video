@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 (2016-08-17)
+
+* Bump ffmpex dependency to 0.2.0
+
 ## 0.1.1 (2016-08-10)
 
 * Added `:max_width` and `:max_height` options.

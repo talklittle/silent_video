@@ -1,8 +1,6 @@
 defmodule SilentVideo.FFmpexCommon do
   import FFmpex
-  import FFmpex.Options.Audio
-  import FFmpex.Options.Video
-  import FFmpex.Options.Video.Libx264
+  use FFmpex.Options
 
   import Integer, only: [is_odd: 1]
 

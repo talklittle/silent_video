@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0 (2016-09-10)
+
+* **Breaking change:** Updated function return values to match ffmpex 0.3.0 API
+* Bump ffmpex dependency to 0.3.0
+
 ## 0.1.2 (2016-08-17)
 
 * Bump ffmpex dependency to 0.2.0

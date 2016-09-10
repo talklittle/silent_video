@@ -1,11 +1,7 @@
 defmodule SilentVideo.Presets do
 
-  alias FFmpex.StreamSpecifier
-
   import FFmpex
-  import FFmpex.Options.Main
-  import FFmpex.Options.Video
-  import FFmpex.Options.Video.Libx264
+  use FFmpex.Options
   import SilentVideo.FFmpexCommon
 
   @doc """
@@ -35,7 +31,7 @@ defmodule SilentVideo.Presets do
     new_command_common_options()
     |> add_input_file(input_file_path)
     |> add_output_file(output_file_path)
-      |> add_stream_specifier(%StreamSpecifier{stream_type: :video})
+      |> add_stream_specifier(stream_type: :video)
         |> add_stream_option(option_b(bitrate))
       |> add_file_option(option_vcodec("libx264"))
       |> add_file_option(option_flags("+loop+mv4"))
@@ -85,7 +81,7 @@ defmodule SilentVideo.Presets do
     new_command_common_options()
     |> add_input_file(input_file_path)
     |> add_output_file(output_file_path)
-      |> add_stream_specifier(%StreamSpecifier{stream_type: :video})
+      |> add_stream_specifier(stream_type: :video)
         |> add_stream_option(option_codec("libx264"))
         |> add_stream_option(option_b(bitrate))
         |> add_stream_option(option_maxrate(bitrate))
@@ -121,7 +117,7 @@ defmodule SilentVideo.Presets do
     new_command_common_options()
     |> add_input_file(input_file_path)
     |> add_output_file(output_file_path)
-      |> add_stream_specifier(%StreamSpecifier{stream_type: :video})
+      |> add_stream_specifier(stream_type: :video)
         |> add_stream_option(option_codec("libx264"))
         |> add_stream_option(option_b(bitrate))
         |> add_stream_option(option_maxrate(bitrate))
@@ -157,7 +153,7 @@ defmodule SilentVideo.Presets do
     new_command_common_options()
     |> add_input_file(input_file_path)
     |> add_output_file(output_file_path)
-      |> add_stream_specifier(%StreamSpecifier{stream_type: :video})
+      |> add_stream_specifier(stream_type: :video)
         |> add_stream_option(option_codec("libx264"))
         |> add_stream_option(option_b(bitrate))
         |> add_stream_option(option_maxrate(bitrate))

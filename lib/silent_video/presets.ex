@@ -168,7 +168,7 @@ defmodule SilentVideo.Presets do
 
   defp new_command_common_options do
     FFmpex.new_command
-    |> add_global_option(option_y)  # overwrite output files
+    |> add_global_option(option_y())  # overwrite output files
   end
 
   defp add_file_framerate_if_number(command, framerate) when is_number(framerate) do

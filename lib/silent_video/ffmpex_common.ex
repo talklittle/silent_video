@@ -9,7 +9,7 @@ defmodule SilentVideo.FFmpexCommon do
   """
   def remove_audio(ffmpex_command) do
     ffmpex_command
-    |> add_file_option(option_an)
+    |> add_file_option(option_an())
   end
 
   @doc """

@@ -22,7 +22,7 @@ SilentVideo.convert_mobile("/path/to/input.gif", "/path/to/output.mp4")
 
     ```elixir
     def deps do
-      [{:silent_video, "~> 0.2.1"}]
+      [{:silent_video, "~> 0.2.2"}]
     end
     ```
 

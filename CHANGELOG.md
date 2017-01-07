@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2 (2017-01-07)
+
+* Fix Elixir 1.4 warnings
+
 ## 0.2.1 (2016-12-03)
 
 * Bump ffmpex dependency to 0.4.0

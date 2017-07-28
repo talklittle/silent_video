@@ -20,19 +20,19 @@ SilentVideo.convert_mobile("/path/to/input.gif", "/path/to/output.mp4")
 
   1. Add `silent_video` to your list of dependencies in `mix.exs`:
 
-    ```elixir
+```elixir
     def deps do
       [{:silent_video, "~> 0.2.2"}]
     end
-    ```
+```
 
   2. Ensure `silent_video` is started before your application:
 
-    ```elixir
+```elixir
     def application do
       [applications: [:silent_video]]
     end
-    ```
+```
 
 ## Release notes
 

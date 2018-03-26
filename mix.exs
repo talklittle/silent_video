@@ -4,7 +4,7 @@ defmodule SilentVideo.Mixfile do
   def project do
     [app: :silent_video,
      version: "0.2.2",
-     elixir: "~> 1.0",
+     elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps(),
@@ -16,7 +16,7 @@ defmodule SilentVideo.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [extra_applications: [:logger]]
   end
 
   # Dependencies can be Hex packages:
@@ -29,7 +29,7 @@ defmodule SilentVideo.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:ffmpex, "~> 0.4.0"},
+    [{:ffmpex, "~> 0.5.0"},
      {:ex_doc, ">= 0.0.0", only: :dev}]
   end
 

@@ -1,15 +1,19 @@
 # Changelog
 
+### 0.3.1 (2020-07-09)
+
+* Bump ffmpex dependency to 0.7.2.
+
 ## 0.3.0 (2018-03-26)
 
 * Bump ffmpex dependency to 0.5.0.
 * Require Elixir 1.4.
 
-## 0.2.2 (2017-01-07)
+### 0.2.2 (2017-01-07)
 
 * Fix Elixir 1.4 warnings.
 
-## 0.2.1 (2016-12-03)
+### 0.2.1 (2016-12-03)
 
 * Bump ffmpex dependency to 0.4.0.
 
@@ -18,11 +22,11 @@
 * **Breaking change:** Updated function return values to match ffmpex 0.3.0 API.
 * Bump ffmpex dependency to 0.3.0.
 
-## 0.1.2 (2016-08-17)
+### 0.1.2 (2016-08-17)
 
 * Bump ffmpex dependency to 0.2.0.
 
-## 0.1.1 (2016-08-10)
+### 0.1.1 (2016-08-10)
 
 * Added `:max_width` and `:max_height` options.
 * Added `:framerate` option for all presets.

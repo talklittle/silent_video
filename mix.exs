@@ -3,7 +3,7 @@ defmodule SilentVideo.Mixfile do
 
   def project do
     [app: :silent_video,
-     version: "0.3.0",
+     version: "0.3.1",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,

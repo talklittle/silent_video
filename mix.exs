@@ -29,7 +29,7 @@ defmodule SilentVideo.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:ffmpex, "~> 0.5.0"},
+    [{:ffmpex, "~> 0.7.2"},
      {:ex_doc, ">= 0.0.0", only: :dev}]
   end
 

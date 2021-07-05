@@ -1,6 +1,6 @@
 # SilentVideo
 
-[![Build Status](https://travis-ci.org/talklittle/silent_video.svg?branch=master)](https://travis-ci.org/talklittle/silent_video)
+[![Build Status](https://github.com/talklittle/silent_video/actions/workflows/ci.yml/badge.svg)](https://github.com/talklittle/silent_video/actions?query=workflow%3ACI)
 
 Convert GIFs and videos to silent videos, optimized for mobile playback.
 

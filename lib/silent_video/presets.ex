@@ -20,6 +20,7 @@ defmodule SilentVideo.Presets do
   * `:bitrate` - An integer bitrate for the output video. Defaults to 384_000.
   * `:framerate` - An integer framerate (frames per second). Defaults to 13.
   """
+  @spec mobile_1(binary, binary, keyword) :: :ok | {:error, {binary, non_neg_integer}}
   def mobile_1(input_file_path, output_file_path, opts \\ []) do
     output_width = integer_opt(opts, :width, nil)
     output_height = integer_opt(opts, :height, nil)
@@ -70,6 +71,7 @@ defmodule SilentVideo.Presets do
   * `:bitrate` - An integer bitrate for the output video. Defaults to 250_000.
   * `:framerate` - An integer framerate (frames per second). Defaults to input framerate.
   """
+  @spec mobile_2(binary, binary, keyword) :: :ok | {:error, {binary, non_neg_integer}}
   def mobile_2(input_file_path, output_file_path, opts \\ []) do
     output_width = integer_opt(opts, :width, nil)
     output_height = integer_opt(opts, :height, nil)
@@ -106,6 +108,7 @@ defmodule SilentVideo.Presets do
   * `:bitrate` - An integer bitrate for the output video. Defaults to 500_000.
   * `:framerate` - An integer framerate (frames per second). Defaults to input framerate.
   """
+  @spec web_1(binary, binary, keyword) :: :ok | {:error, {binary, non_neg_integer}}
   def web_1(input_file_path, output_file_path, opts \\ []) do
     output_width = integer_opt(opts, :width, nil)
     output_height = integer_opt(opts, :height, nil)
@@ -142,6 +145,7 @@ defmodule SilentVideo.Presets do
   * `:bitrate` - An integer bitrate for the output video. Defaults to 400_000.
   * `:framerate` - An integer framerate (frames per second). Defaults to input framerate.
   """
+  @spec tablet_1(binary, binary, keyword) :: :ok | {:error, {binary, non_neg_integer}}
   def tablet_1(input_file_path, output_file_path, opts \\ []) do
     output_width = integer_opt(opts, :width, nil)
     output_height = integer_opt(opts, :height, nil)

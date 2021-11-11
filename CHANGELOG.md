@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.3.2 (2021-11-10)
+
+* Bump ffmpex dependency to 0.8.0.
+
 ### 0.3.1 (2020-07-09)
 
 * Bump ffmpex dependency to 0.7.2.

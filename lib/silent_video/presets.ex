@@ -57,6 +57,7 @@ defmodule SilentVideo.Presets do
       |> compatible_pixel_format(output_width, output_height, max_width, max_height)
       |> streamable
     |> execute
+    |> format_return_value
   end
 
   @doc """
@@ -94,6 +95,7 @@ defmodule SilentVideo.Presets do
       |> compatible_pixel_format(output_width, output_height, max_width, max_height)
       |> streamable
     |> execute
+    |> format_return_value
   end
 
   @doc """
@@ -131,6 +133,7 @@ defmodule SilentVideo.Presets do
       |> compatible_pixel_format(output_width, output_height, max_width, max_height)
       |> streamable
     |> execute
+    |> format_return_value
   end
 
   @doc """
@@ -168,6 +171,7 @@ defmodule SilentVideo.Presets do
       |> compatible_pixel_format(output_width, output_height, max_width, max_height)
       |> streamable
     |> execute
+    |> format_return_value
   end
 
   defp new_command_common_options do
@@ -184,4 +188,8 @@ defmodule SilentVideo.Presets do
     value = Keyword.get(opts, key)
     if is_integer(value), do: value, else: default
   end
+
+  # Format the return value of FFmpex.execute/1
+  defp format_return_value({:ok, _}), do: :ok
+  defp format_return_value({:error, error}), do: {:error, error}
 end

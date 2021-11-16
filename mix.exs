@@ -4,7 +4,7 @@ defmodule SilentVideo.Mixfile do
   def project do
     [app: :silent_video,
      version: "0.3.2",
-     elixir: "~> 1.4",
+     elixir: "~> 1.9",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps(),
@@ -29,7 +29,7 @@ defmodule SilentVideo.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:ffmpex, "~> 0.8.0"},
+    [{:ffmpex, "~> 0.9.0"},
      {:ex_doc, ">= 0.0.0", only: :dev}]
   end
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.0 (2021-11-16)
+
+* Bump ffmpex dependency to 0.9.0.
+* Require Elixir 1.9.
+
 ### 0.3.2 (2021-11-10)
 
 * Bump ffmpex dependency to 0.8.0.

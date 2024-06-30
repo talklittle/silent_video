@@ -22,7 +22,7 @@ Add `silent_video` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:silent_video, "~> 0.4.0"}]
+  [{:silent_video, "~> 0.5.0"}]
 end
 ```
 
